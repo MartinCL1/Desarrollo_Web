@@ -2,15 +2,17 @@
 	margin: 0; 
 	padding: 0;
 }
-body{
-	height: 200vh;
+
+label{
+	color: black;
 }
+
 nav{
 	width: 100%;
 	position: fixed;
 	top: 0;
 	background-color: white;
-	box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.525);
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.671);
 }
 
 .menu-container{
@@ -30,9 +32,10 @@ nav{
 .menu-container a:hover{
 	transition: .5s;
 	color: white;
-	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.673);
+	box-shadow: 1px 2px 5px rgb(0, 0, 0);
 	/* background-color: rgb(17, 169, 219); */
 	background-color: deeppink;
+	transform: translateX(10px)
 }
 
 .header{
@@ -60,4 +63,34 @@ nav{
 	align-items: center;
 	flex-direction: column;
 	color: white;
+}
+
+main{
+	margin-top: 2%;
+}
+
+.contenedor-images{
+	display: flex;
+	width: 90%;
+	border: 1px solid black;
+	margin: auto;
+}
+
+.tarjetas{
+	display: flex;
+	width: 25%;
+	border: 1px solid;
+	margin: 1%;
+	flex-direction: column;
+}
+.imagen{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+img{
+	margin: 10px;
+	width: 80%;
+	border-radius: 10px 0px 10px 0;
 }
