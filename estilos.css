@@ -1,96 +1,69 @@
 *{
-	margin: 0; 
-	padding: 0;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
 }
 
-label{
-	color: black;
+:root{
+    --blanco: #ffff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
 }
 
-nav{
-	width: 100%;
-	position: fixed;
-	top: 0;
-	background-color: white;
-	box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.671);
+body{
+    font-size: 16px;
 }
 
-.menu-container{
-	display: flex;
-	justify-content: space-around;
+.titulo{
+    text-align: center;
 }
 
-.menu-container a{
-	display: inline-block;
-	padding: 15px 30px;
-	color: black;
-	margin: .5%;
-	text-decoration: none;
-	border-radius: 10px 0 5px 0;
+.titulo span{
+    font-size: 2rem;
 }
 
-.menu-container a:hover{
-	transition: .5s;
-	color: white;
-	box-shadow: 1px 2px 5px rgb(0, 0, 0);
-	/* background-color: rgb(17, 169, 219); */
-	background-color: deeppink;
-	transform: translateX(10px)
+.contenedor{
+    background-color: #0097a7;
+    margin: 2rem 0 2rem 0;
 }
 
-.header{
-	background-image: url('https://images.unsplash.com/photo-1494496195158-c3becb4f2475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2670&q=80');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-attachment: fixed;
-	background-size: cover;
-	height: 50vh;
-	width: 100%;
-	margin-top: 3.5%;
-}
-.capa{
-	display: flex;
-	height: 100%;
-	width: 100%;
-	background: linear-gradient(rgba(255, 130, 28, 0.525), rgba(100, 148, 237, 0.493));
-	justify-content: center;
-	align-items: center;
+.menu-principal{
+    display: flex;
+    max-width: 120rem;
+    margin: auto;
+    justify-content: space-between;
 }
 
-.contenido{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	color: white;
+.menu-principal a{
+    padding: 15px 20px;
+    color: var(--blanco);
+    font-weight: 700;
+    text-decoration: none;;
 }
 
-main{
-	margin-top: 2%;
+.menu-principal a:hover{
+    background-color: var(--primario);
+    color: var(--oscuro);
 }
 
-.contenedor-images{
-	display: flex;
-	width: 90%;
-	border: 1px solid black;
-	margin: auto;
+.hero{
+    background-image: url('');
 }
 
-.tarjetas{
-	display: flex;
-	width: 25%;
-	border: 1px solid;
-	margin: 1%;
-	flex-direction: column;
-}
-.imagen{
-	display: flex;
-	justify-content: center;
-	align-items: center;
+@media (max-width: 480px) {
+    .menu-principal{
+        flex-direction: column;
+        background-color: #ffc107;
+    }
+    h1{
+        font-size: 2rem;
+    }
 }
 
-img{
-	margin: 10px;
-	width: 80%;
-	border-radius: 10px 0px 10px 0;
+.fondo{
+    height: 50px;   
 }
