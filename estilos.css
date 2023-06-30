@@ -1,69 +1,201 @@
 *{
-    margin: 0;
-    padding: 0;
+	margin: 0;
+	padding: 0;
 }
 html{
-    font-size: 62.5%;
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
 }
 
 :root{
-    --blanco: #ffff;
-    --oscuro: #212121;
-    --primario: #ffc107;
-    --secundario: #0097a7;
-    --gris: #757575;
+	--blue: #256eff;
+	--robin: #4ecdc4;
+	--cream: #f7fff7;
+	--crayola: #ef476f;
+	--orange: #f18f01;
 }
-
 body{
-    font-size: 16px;
+	font-size: 16px;
 }
 
-.titulo{
-    text-align: center;
+header{
+	margin: 2rem 0rem;
 }
 
-.titulo span{
-    font-size: 2rem;
+h1{
+	font-size: 3.8rem
+}
+h2{
+	font-size: 2.8rem;
+}
+h3{
+	font-size: 1.8rem;
+}
+h1, h2, h3{
+	text-align: center;
 }
 
-.contenedor{
-    background-color: #0097a7;
-    margin: 2rem 0 2rem 0;
+.paragraph{
+	text-align: center;
+}
+/*Dando estilos correspondientes a el menu*/
+nav{
+	display: flex;
+	max-width: 100%;
+	background-color: var(--blue);
+	justify-content: space-between;
+}
+.menu-right{
+	display: inherit;
+	max-width: 100%;
+	justify-content: space-around;
+	align-items: center;
 }
 
-.menu-principal{
-    display: flex;
-    max-width: 120rem;
-    margin: auto;
-    justify-content: space-between;
+.menu-right a, .btn, .sub-menu a{
+	padding: 2rem 3rem;
+	color: white;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 2rem;
+}
+.menu-right a:hover{
+	transform: translateX(-4%);
+	transition: .5s;
+}
+.sub-menu{
+	display: none;
+	position: absolute;
 }
 
-.menu-principal a{
-    padding: 15px 20px;
-    color: var(--blanco);
-    font-weight: 700;
-    text-decoration: none;;
+.sub-menu a{
+	display: block;
+	background-color: var(--blue);
+	margin: 1rem;
+	padding: 1.5rem 5rem;
+	border-radius: .5rem 0 .5rem 0;
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.525);
+}
+.sub-menu a:hover, .menu-right a:hover{
+	background-color: deepskyblue;
+	color: white;
+}
+.btn{
+	position: relative;
+	background-color: #256eff;
+	border: none;
+	font-family: inherit;
+}
+.menu-left:hover > .sub-menu{
+	display: block ;
+}
+.seccion{
+	display: flex;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.497);
+	border-radius: .5rem;
+	justify-content: center;
+}
+.contenedor-seccion{
+	display: inherit;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.contenedor-1{
+	display: flex;
+	justify-content: center;
+}	
+
+.contenedor-1_right{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.menu-principal a:hover{
-    background-color: var(--primario);
-    color: var(--oscuro);
+.tarjetas{
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid;
+	flex-direction: column;	
+	align-items: center;
 }
-
-.hero{
-    background-image: url('');
+.contenido{
+	margin-top: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+	height: auto;
 }
-
-@media (max-width: 480px) {
-    .menu-principal{
-        flex-direction: column;
-        background-color: #ffc107;
-    }
-    h1{
-        font-size: 2rem;
-    }
+.tarjeta{
+	display: flex;
+	border: 1px solid black;
+	font-size: 5%;
+	align-items: center;
+	border-radius: 5px;
 }
-
-.fondo{
-    height: 50px;   
+.tarjeta-contenedor{
+	width: 100%;
+	margin: 2%;
+}
+.img{
+	padding: 1rem;
+	width: 20rem;
+	max-width: 100%;
+	max-height: 20rem;
+}
+.tallas{
+	margin-top: 2rem;
+}
+.talla{
+	margin: .5rem;
+	width: 10%;
+	border: 1px solid bisque;
+	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.514);
+	background-color: rgba(255, 20, 145, 0.864);
+	padding: 1.5%;
+	border-radius: .5rem;
+}
+.talla:hover{
+	transition: .2s;
+	background-color: deepskyblue;
+	transform: translateY(-.3rem);
+	color: white;	
+}
+@media(max-width: 480px){
+	nav{
+		flex-direction: column;	
+		background-color: white;
+	}
+	.tarjeta{
+		width: 100%;
+	}
+	.menu-right a{
+		padding: 1rem .5rem;
+	}
+	.menu-left{
+		margin-top: 2rem;
+		order: 2;
+	}
+	.menu-right{
+		order: 1;
+	}
+	.menu-right a{
+		color: black;
+	}
+	.btn{
+		box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.525);
+	}
+	.contenedor-1{
+		display: flex;
+		flex-direction: column;
+	}
+	.contenedor-seccion{
+		flex-direction: column;	
+	}
 }
