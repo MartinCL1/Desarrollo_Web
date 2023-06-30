@@ -1,40 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="estilos.css"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Documento de Prueba</title>
+	<link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
-    
-    <header>
-        <h1 class="titulo">Juan De la Torre 
-            <span>Freelancer</span>
-        </h1>
-    </header>
 
-    <div class="contenedor">
-        <nav class="menu-principal">
-            <a href="#">Inicio</a>
-            <a href="#">Sobre Mí</a>
-            <a href="#">Clientes</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </div>
+	<!--Creando el encabezado de la pagina web-->
+	<header>
+		<h1>Bienvenido a nuestra pagina web</h1>
+		<p class="paragraph">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab corrupti corporis, eligendi
+			alias consectetur atque?</p>
+	</header>
 
-    <section class="hero">
-        <div class="contenido-hero">
-            <h2 class="titulo">Diseño y desarrollo web</h2>
+	<nav>
+		<div class="menu-left">
+			<button class="btn">Menu</button>
+			<div class="sub-menu">
+				<a href="">Catalogo Caballeros</a>
+				<a href="">Catalogo Damas</a>
+				<a href="">Catalogo niños</a>
+				<a href="">Catalogo niñas</a>
+			</div>
+		</div>
+		<div class="menu-right">
+			<a href="">Iniciar Sesion</a>
+			<a href="">Registrarte</a>
+			<a href="">Contactos</a>
+		</div>
+	</nav>
 
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 fondo">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
-            </svg>
-            <p>Guadalajara, Jalisco</p>
-            <a href="">Contactar</a>
-        </div>
-        
-    </section>
-    
+	<main> <!--Unicamente puedo tener un main dentro de una hoja de HTML-->
+		<section class="contenedor-1">
+			<img src="src/shoe.svg" alt="">
+			<div class="contenedor-seccion">
+				<h2>Busca lo que mas te convenga</h2>
+				<h3 style="font-weight: 100;">Haz tus pagos desde cualquier lugar <br>
+					y elige los mejores metodos de pago para ti.<br>
+					Lorem ipsum dolor sit amet.
+				</h3>
+			</div>
+		</section>
+
+		<div class="contenido">
+			<div class="tarjeta">
+				<img class="img"
+					src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" />
+				<div class="tarjeta-contenedor"> <!--Contenido de la carta-->
+					<h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
+						<div class="tallas">
+							 <h3 style="text-align: left;">Tallas: </h3>			
+							 <button class="talla" >31</button>
+							 <button class="talla" >32</button>
+							 <button class="talla" >34</button>
+							 <button class="talla" >34</button>
+							 <button class="talla" >34</button>
+						</div>
+				</div>
+			</div>
+			<div class="tarjeta">
+				<img class="img"
+					src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" />
+				<div class="tarjeta-contenedor"> <!--Contenido de la carta-->
+					<h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
+				</div>
+			</div>
+			<div class="tarjeta">
+				<img class="img"
+					src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" />
+				<div class="tarjeta-contenedor"> <!--Contenido de la carta-->
+					<h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
+				</div>
+			</div>
+			<div class="tarjeta">
+				<img class="img"
+					src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" />
+				<div class="tarjeta-contenedor"> <!--Contenido de la carta-->
+					<h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
+				</div>
+			</div>
+
+		</div>
+
+	</main>
+
 </body>
+
 </html>
