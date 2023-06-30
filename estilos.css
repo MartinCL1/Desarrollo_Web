@@ -12,7 +12,7 @@ html{
 }
 
 :root{
-	--blue: #256eff;
+	--blue: #2546ff;
 	--robin: #4ecdc4;
 	--cream: #f7fff7;
 	--crayola: #ef476f;
@@ -20,6 +20,8 @@ html{
 }
 body{
 	font-size: 16px;
+	background-image: linear-gradient(to bottom, #8ccfcc 0%, #ffffff 100%);
+	background-attachment: fixed;
 }
 
 header{
@@ -124,7 +126,7 @@ nav{
 	align-items: center;
 }
 .contenido{
-	margin-top: 1rem;
+	margin: 1rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -134,10 +136,11 @@ nav{
 }
 .tarjeta{
 	display: flex;
-	border: 1px solid black;
 	font-size: 5%;
 	align-items: center;
+	background-color: white;
 	border-radius: 5px;
+    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.658);
 }
 .tarjeta-contenedor{
 	width: 100%;
@@ -149,6 +152,10 @@ nav{
 	max-width: 100%;
 	max-height: 20rem;
 }
+
+input[type='number']{
+    width: 20%;
+}
 .tallas{
 	margin-top: 2rem;
 }
@@ -157,7 +164,7 @@ nav{
 	width: 10%;
 	border: 1px solid bisque;
 	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.514);
-	background-color: rgba(255, 20, 145, 0.864);
+	background-color: white;
 	padding: 1.5%;
 	border-radius: .5rem;
 }
@@ -165,7 +172,32 @@ nav{
 	transition: .2s;
 	background-color: deepskyblue;
 	transform: translateY(-.3rem);
-	color: white;	
+	color: white;
+	cursor: pointer;
+}
+.btn-compra{
+	display: block;
+	width: 50%;
+	margin: auto;
+	margin-top: 3rem;
+	padding:  .5rem 0;
+	background-color: #ef476f;
+	border: none;
+	border-radius: 5px;
+	box-shadow: 1px 2px 3px black;
+}
+.btn-compra:hover{
+	background-color: #f18f01;
+	cursor: pointer;
+	color: white;
+}
+footer{
+	height: 20rem;
+	display: flex;
+	flex-direction: row;
+	color: white;
+	align-items: center;
+	background-color: #2546ff;
 }
 @media(max-width: 480px){
 	nav{
@@ -193,7 +225,7 @@ nav{
 	}
 	.contenedor-1{
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 	}
 	.contenedor-seccion{
 		flex-direction: column;	
