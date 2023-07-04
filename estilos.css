@@ -285,23 +285,13 @@ input[type='number'] {
 .tallas {
 	margin-top: 2rem;
 }
-
-.talla {
-	margin: .5rem;
-	width: 10%;
-	border: 1px solid bisque;
-	box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.514);
-	background-color: white;
-	padding: 1.5%;
-	border-radius: .5rem;
-}
-
-.talla:hover {
-	transition: .2s;
+select{
+	list-style: none;
+	margin: 1rem 0;
+	padding: .5rem 3rem;
 	background-color: deepskyblue;
-	transform: translateY(-.3rem);
-	color: white;
-	cursor: pointer;
+	box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.536);
+	border-radius: .5rem 0 .5rem 0;
 }
 
 .btn-compra {
@@ -320,7 +310,6 @@ input[type='number'] {
 	justify-content: center;
 	align-items: center;
 }
-
 .btn-compra:hover {
 	display: flex;
 	background-color: #f18f01;
@@ -380,4 +369,4 @@ footer {
 	.contenedor-seccion {
 		flex-direction: column;
 	}
-} 
+}
