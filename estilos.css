@@ -42,7 +42,48 @@ header {
 	height: 65rem;
 	max-height: 65rem;
 }
-
+.modal-tienda{
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(53, 53, 53, 0.432);
+	text-decoration-skip: none;
+}
+.img-modal{
+	max-width: 10%;
+	height: 5rem;
+}
+.modal-tienda-hidden{
+	display: none;
+}
+.btn-modal{
+	width: 2.5%;
+	height: 5%;
+	border: none;
+	border-radius: 200%;
+	background-color: #36aeff;
+	box-shadow: 2px 3px 5px rgb(0, 0, 0);
+}
+.btn-modal:hover{
+	background-color: rgb(72, 203, 255);
+	cursor: pointer;
+}
+.modal-info{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 25%;
+	height: 12%;
+	border-radius: 1rem;
+	background-color: rgb(255, 255, 255);
+}
 .capa {
 	display: flex;
 	color: white;
