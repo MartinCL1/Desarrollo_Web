@@ -51,7 +51,6 @@ header {
 	left: 0;
 	right: 0;
 	background-color: rgba(53, 53, 53, 0.432);
-	text-decoration-skip: none;
 }
 
 .img-modal {
@@ -59,21 +58,51 @@ header {
 	height: 5rem;
 }
 
-.modal-tienda-hidden {
+.modal-hidden {
 	display: none;
 }
-
+.panel-carrito{
+	position: fixed	;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgb(255, 255, 255);
+	z-index: 2;
+}
+.btn-carrito{
+	position: fixed;
+	bottom: 5rem;
+	right: 0;
+	background-color: #25283d;
+	width: 4%;
+	height: 8%;
+	border-radius: 50rem;
+	z-index: 3;
+}
+.btn-regresar{
+	border: none;
+	background-color: transparent;
+	font-size: 1.5rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	width: 6%;
+	height: 3%;
+	cursor: pointer;
+}
 .btn-modal {
-	color: white;
+	color: white;	
 	position: absolute;
 	font-size: 2rem;
+	top: 0;
+	left: 0;
+	transform: translate(-50%, -50%);
 	font-weight: 700;
-	width: 2.5%;
-	height: 5%;
+	width: 5%;
+	height:20%;
 	border: none;
 	border-radius: 200%;
 	background-color:var(--dark);
-	box-shadow: 2px 3px 5px rgb(0, 0, 0);
 }
 
 .btn-modal:hover {
@@ -82,7 +111,7 @@ header {
 }
 
 .modal-info {
-	position: absolute;
+	position: relative;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
