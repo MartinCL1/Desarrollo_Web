@@ -16,7 +16,6 @@
         <button onclick="cerrar()" class="btn-modal">X</button>
         <div class="modal-info">
             <img class="img-modal" src="https://cdn-icons-png.flaticon.com/128/463/463574.png" />
-
             <div>
                 <h3 style="text-align: center;" id="titulo-carrito"></h3>
                 <h4 style="font-size: 1.5rem;" id="info"></h4>
@@ -63,8 +62,7 @@
         </section>
 
         <div class="contenido"> <!--Este es el contenedor de todas las tarjetas-->
-
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta">  <!--Capa principal-->
                 <!--Estas son las tarjetas que portan informacion acerca de cada uno de los zapatos.-->
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
@@ -73,28 +71,24 @@
 
                 <img class="img"
                     src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" />
-                <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Zapatos de niña</h2>
-                        <h2 class="esp">Mas especificaciones del producto</h2>
+                <div class="tarjeta-contenedor"> <!--Contenido de la carta--> <!--Segunda capa-->
+                    <h2 id="producto" style="font-size: 2.5rem;">Zapatos de niña</h2> <!--get the shoes description is a h3-->
+                        <h3 class="esp" id="especificacion">Mas especificaciones del producto</h3>  <!--H2 Get the specifications-->
                         <div class="tallas">
                             <h3 style="text-align: left;">Tallas: </h3>
-                            <select name="" id="">
+                            <select name="" id="tallas">
                                 <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                                 <option value="">Primer Valor</option>
                                 <option value="">Segundo Valor</option>
                                 <option value="">Tercer Valor</option>
                             </select>
-                            <br>sada
+                            <br>
                             <h3 style="text-align: left" ;>
                                 cantidad a comprar:
-                                <input min="0" max="5" type="number">
+                                <input value="1" min="0" max="5" type="number">
                             </h3>
                         </div>
-                        <button class="btn-compra">
-                            <div class="barra-top"></div>
-                            <div class="barra-bottom"></div>
-                            <div class="barra-left"></div>
-                            <div class="barra-right"></div>
+                        <button class="btn-compra" onclick="operar(this)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 style="fill: rgb(255, 255, 255);">
                                 <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -109,7 +103,7 @@
                 </div>
 
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -117,12 +111,12 @@
                 <img class="img"
                     src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2012&q=80" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
+                    <h2 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h2>
+                        <h3 class="esp" id="especificacion">Mas especificaciones
                     </h3>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -131,14 +125,10 @@
                         <br>
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
-                        <div class="barra-top"></div>
-                        <div class="barra-bottom"></div>
-                        <div class="barra-left"></div>
-                        <div class="barra-right"></div>
+                    <button class="btn-compra"  onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -152,7 +142,7 @@
                     </button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -160,12 +150,12 @@
                 <img class="img"
                     src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -174,11 +164,11 @@
                         <br>
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
 
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -191,7 +181,7 @@
                         añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -199,12 +189,12 @@
                 <img class="img"
                     src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -213,10 +203,10 @@
                         <br>
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -229,7 +219,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -237,12 +227,12 @@
                 <img class="img"
                     src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -252,10 +242,10 @@
 
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -268,7 +258,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -276,12 +266,12 @@
                 <img class="img"
                     src="https://plus.unsplash.com/premium_photo-1670983858348-84276a682db7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -291,11 +281,11 @@
 
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
 
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -308,7 +298,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -316,12 +306,12 @@
                 <img class="img"
                     src="https://images.unsplash.com/photo-1570464197285-9949814674a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1073&q=80" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -331,10 +321,10 @@
 
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra"  onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -347,7 +337,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -355,12 +345,12 @@
                 <img class="img"
                     src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -370,11 +360,11 @@
 
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
 
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -387,7 +377,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -395,12 +385,12 @@
                 <img class="img"
                     src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -410,11 +400,11 @@
 
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
 
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra"  onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -427,7 +417,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -435,12 +425,12 @@
                 <img class="img"
                     src="https://media.istockphoto.com/id/936875686/es/foto/concepto-de-enfrentar-una-decisi%C3%B3n-crucial-de-zapatos-en-diferentes-v%C3%ADas-de-color.jpg?s=2048x2048&w=is&k=20&c=VMBNQTuyOr4T3-sFqk1nFITN1U58NkSu-rWLzvKs2DE=" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -450,10 +440,10 @@
 
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra"  onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -466,7 +456,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -474,12 +464,12 @@
                 <img class="img"
                     src="https://media.istockphoto.com/id/949860498/es/foto/hombre-con-su-zapato.jpg?s=2048x2048&w=is&k=20&c=nRxtPgWhM2AW-U4RD7QQmX_VkcDTiyQBR3lsJX0Jb38=" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -488,10 +478,10 @@
                         <br>
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -504,7 +494,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -512,12 +502,12 @@
                 <img class="img"
                     src="https://media.istockphoto.com/id/1271009100/es/foto/pies-de-adultos-y-ni%C3%B1os-con-un-par-de-zapatos-de-lona-en-diferentes-colores.jpg?s=2048x2048&w=is&k=20&c=MVlD2em8Ls-2Sb00ysgnjZJYfmO_ygDJYa72XECPbu8=" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -526,10 +516,10 @@
                         <br>
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -542,7 +532,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -550,12 +540,12 @@
                 <img class="img"
                     src="https://media.istockphoto.com/id/589943432/es/foto/mujer-zapatos-y-sneaker-vaqueros.jpg?s=2048x2048&w=is&k=20&c=VntYcn6wkMuFVDJ0UG-Y8TCgm_jL1yd0tzieNke2x1Y=" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -565,10 +555,10 @@
 
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -581,7 +571,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -589,26 +579,25 @@
                 <img class="img"
                     src="https://media.istockphoto.com/id/1167236344/es/foto/piernas-de-ni%C3%B1o-y-adulto.jpg?s=2048x2048&w=is&k=20&c=ZkaHYP43fb2kBZ_F33Hm74A74M-AANX_G8cMSTfK0Hk=" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones
+                    </h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
                             <option value="">Tercer Valor</option>
                         </select>
                         <br>
-
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
 
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -621,7 +610,7 @@
                         Añadir al carrito</button>
                 </div>
             </div>
-            <div class="tarjeta" onclick="operar(this)">
+            <div class="tarjeta" >
                 <div class="barra-top"></div>
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
@@ -629,12 +618,11 @@
                 <img class="img"
                     src="https://media.istockphoto.com/id/825695496/es/foto/pies-en-zapatillas-de-deporte-de-cerca-un-hombre-se-sienta-apoyado.jpg?s=2048x2048&w=is&k=20&c=Z_x-vG9oIBhU2UOBqZbDZPKIi-TMv4LkKTPjZ2CCvgo=" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta-->
-                    <h3 style="font-size: 2.5rem;">Descripcion del producto</h2>
-                        <h2 class="esp">Mas especificaciones
-                    </h3>
+                    <h3 id="producto" style="font-size: 2.5rem;">Descripcion del producto</h3>
+                        <h2 id="especificacion" class="esp">Mas especificaciones</h2>
                     <div class="tallas">
                         <h3 style="text-align: left;">Tallas: </h3>
-                        <select name="" id="">
+                        <select name="" id="tallas">
                             <!--Aqui podemos ver las tallas de zapatos que se encuentran disponibles en la tienda en linea-->
                             <option value="">Primer Valor</option>
                             <option value="">Segundo Valor</option>
@@ -643,10 +631,10 @@
                         <br>
                         <h3 style="text-align: left" ;>
                             cantidad a comprar:
-                            <input min="0" max="5" type="number">
+                            <input value="1" min="0" max="5" type="number">
                         </h3>
                     </div>
-                    <button class="btn-compra">
+                    <button class="btn-compra" onclick="operar(this)">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             style="fill: rgb(255, 255, 255);">
                             <circle cx="10.5" cy="19.5" r="1.5"></circle>
@@ -662,8 +650,6 @@
         </div>
 
     </main>
-
-
 
     <footer>
         <div class="footer-left">
