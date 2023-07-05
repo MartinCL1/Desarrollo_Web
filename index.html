@@ -12,9 +12,9 @@
 
 <body>
 
-    <div id="modal"> <!--Modal del carrito de compras-->
-        <button onclick="cerrar()" class="btn-modal">X</button>
+    <div id="modal" class="modal-tienda modal-hidden"> <!--Modal del carrito de compras-->
         <div class="modal-info">
+            <button onclick="cerrar()" class="btn-modal">X</button>
             <img class="img-modal" src="https://cdn-icons-png.flaticon.com/128/463/463574.png" />
             <div>
                 <h3 style="text-align: center;" id="titulo-carrito"></h3>
@@ -24,6 +24,17 @@
         </div>
     </div>
     <!--Creando el encabezado de la pagina web-->
+    <button class="btn-carrito" onclick="mostrarCarrito()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                style="fill: rgb(255, 255, 255);">
+                                <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                                <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                                <path d="M13 13h2v-2.99h2.99v-2H15V5.03h-2v2.98h-2.99v2H13V13z"></path>
+                                <path
+                                    d="M10 17h8a1 1 0 0 0 .93-.64L21.76 9h-2.14l-2.31 6h-6.64L6.18 4.23A2 2 0 0 0 4.33 3H2v2h2.33l4.75 11.38A1 1 0 0 0 10 17z">
+                                </path>
+                            </svg>
+    </button>
     <header>
         <div class="capa">
             <h1>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas, numquam. </h1>
@@ -47,15 +58,23 @@
         </div>
     </nav>
 
+    <div class="panel-carrito modal-hidden" id="panel-carrito">
+        <button class="btn-regresar" onclick="ocultarCarrito()">regresar</button>
+        <h1>Productos agregados</h1><br>
+        <hr>
+        <div class="contenido" style="margin-top: 2rem;" id="contenido-carrito">
+
+        </div>
+    </div>
+
     <main> <!--Unicamente puedo tener un main dentro de una hoja de HTML-->
         <section class="contenedor-1">
             <img src="https://raw.githubusercontent.com/MartinCL1/Resources/f288c3f7432fecc102e23a555a41ef5935d6d0c2/fondo.svg"
                 alt="">
             <div class="contenedor-seccion">
-                <h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe, eius.</h2>
+                <h2>Lorem, ips  um dolor sit amet consectetur adipisicing elit. Saepe, eius.</h2>
                 <h3 style="font-weight: 100;">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
                     Lorem ipsum dolor sit amet consectetur.<br>
-
                     Lorem ipsum dolor sit amet.
                 </h3>
             </div>
@@ -68,7 +87,6 @@
                 <div class="barra-bottom"></div>
                 <div class="barra-left"></div>
                 <div class="barra-right"></div>
-
                 <img class="img"
                     src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8c2hvZXN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=600&q=60" />
                 <div class="tarjeta-contenedor"> <!--Contenido de la carta--> <!--Segunda capa-->
