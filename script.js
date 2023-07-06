@@ -13,17 +13,13 @@ function operar(btn) {   // Se activara siempre y cuando presionemos el boton pa
 	let tallas = contenedor.querySelector('#tallas')
 	let talla = tallas.options
 	let cantidad = contenedor.querySelector('input[type="number"]').value
-	comprar()
+	let referencia = contenedor.get
 
 	carrit.push({
 		'producto': etiqueta,
 		'cantidad': cantidad,
-		'talla': 3
-	})
-	carrit.forEach((a) => {
-		let t_tarjeta = a.producto;
-		let cant_tarjeta = a.cantidad;
-		let talla_tarjeta = a.talla;
+		'talla': 3,
+		'referencia': referencia // guardo la referencia de la imagen que corresponde al producto.
 	})
 	document.getElementById('titulo-carrito').innerHTML = `Se agrego <br>${etiqueta}<br>Talla: ${talla[tallas.selectedIndex].innerHTML}
 	<br> cantidad: ${cantidad}`
@@ -41,16 +37,33 @@ let cerrar = function () {
 	document.getElementById('titulo-carrito').innerHTML = ''
 }
 
-function mostrarCarrito() {
+function mostrarCarrito() { // Esta funcion ayuda a que pueda mostrarse el carrito de compras
 	let carrito = document.getElementById('panel-carrito');
+	carrito.classList.remove('modal-hidden');
 	let aux = 0;
-	carrito.classList.remove('modal-hidden')
 	if (carrit.length > 0) {
 		while (aux < carrit.length) {
+			// este codigo crea la tarjeta
 			let div_tarjeta = document.createElement('div');
-			div_tarjeta.classList.add('tarjeta')
-			let contenedor = document.getElementById('contenido-carrito')
-			contenedor.append(div_tarjeta)
+			div_tarjeta.classList.add('tarjeta');
+			//agrago la imagen correspondiente del producto
+			let img_carrito = document.createElement('img')
+			img_carrito.classList.add('img')
+			img_carrito.src = carrit[aux]['referencia']
+			div_tarjeta.append(img_carrito)  // agrego la imagen a el div tarjeta
+			// este otro crea la tarjeta para almacenar el contenido.
+			let tarjeta_contenedor = document.createElement('div')
+			tarjeta_contenedor.classList.add('tarjeta-contenedor')
+			let contenedor = document.getElementById('contenido-carrito');
+			// Este codigo crea los elementos que contendra la tarjeta
+			let cabecera_carrito = document.createElement('h2') // obtengo la info del producto
+			cabecera_carrito.innerHTML = carrit[aux]['producto'];
+			cabecera_carrito.classList.add('h3-font')
+			
+			tarjeta_contenedor.appendChild(cabecera_carrito);
+			div_tarjeta.append(tarjeta_contenedor)
+			// agrego la tarjeta a mi contenedor padre ''contenido''
+			contenedor.append(div_tarjeta);
 			aux++;
 		}
 	}
@@ -69,3 +82,4 @@ function eliminarElementos() {  // Permite eliminar elemetnod de un contenedor
 		div.removeChild(div.firstChild);
 	}
 }
+
