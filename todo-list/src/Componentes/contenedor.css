@@ -1,0 +1,44 @@
+.contenedor {
+    height: 100%;
+    width: 100%;
+}
+
+.informacion-nota {  /* wrapper global de la nota*/
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    padding: 2px 5px;
+}
+
+.nota-datos {  /* wrapper de la informacion de las notas */
+    display: flex;
+    align-items: center;
+    width: 80%  ;
+}
+
+.headers{  /* contiene el titulo de mi nota */
+    width: 80%;
+}
+
+.fecha {  /* Contiene fecha de la nota */
+    width: 20%;
+}
+
+.nota-opciones   { /* botones de las notas, marcar como hecho, marcar como eliminado. */
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fecha, .headers p {
+    font-size: clamp(8px, 1vw + 1px, 15px);
+}
+
+.nota-opciones svg {
+    width: 20%;
+}
+
+.nota-opciones svg:hover {
+    cursor: pointer;
+    stroke: #026c50; /* Stroke: le da el color a los bordes del svg*/
+}

@@ -1,0 +1,86 @@
+*:before, *:after, * {
+  box-sizing: bor er-box;
+  padding: 0;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+}
+
+h1 {
+  color: slategray;
+  font-size: clamp(25px, 3vw + 1px, 50px);
+  margin-bottom: 5%;
+  text-align: center;
+}
+
+.contenido {
+  max-width: 800px;
+  border: 1px solid rgba(47, 79, 79, 0.176);
+  box-shadow: 1px 2px 3px #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 90%;
+}
+
+.secciones {
+  display: flex;
+  border-bottom: 1px solid rgba(47, 79, 79, 0.176);
+}
+
+.add-button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  
+  margin: 0% 0 .5% 40%;
+  font-size: clamp(5px, 2vw + 1px, 15px);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: darkslategray;
+  color: white;
+  cursor: pointer ;
+}
+
+.add-button:hover {
+  background-color: darkslateblue;
+}
+
+.secciones a {
+  text-decoration: none;
+  color: darkslategrey;
+  width: 33.33%;
+  font-size: clamp(5px, 2vw + 1px, 15px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1%;
+  overflow: hidden;
+}
+
+.secciones a.selected {
+  background-color: darkslategrey;
+  color: white;
+}
+
+.tareas {
+  position: relative;
+  display: flex;
+  height: 400px;
+  width: 100%;
+}
+
+@media (width < 500px ), (height <  650px){
+
+  .tareas {
+    height: 50vh;
+  }
+}
