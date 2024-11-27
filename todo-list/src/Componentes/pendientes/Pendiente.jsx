@@ -1,6 +1,6 @@
 import Vacio from '../vacio/Vacio';
 import { useDispatch, useSelector } from 'react-redux';
-import { seleccionarNota, agregarNotaEliminada, eliminarNotaPendiente } from '../../store/Slices/notas';
+import { seleccionarNota, agregarNotaEliminada, eliminarNotaPendiente, busquedaNota } from '../../store/Slices/notas';
 import Nota from '../Nota/Nota';
 
 function Pendiente () {
@@ -10,7 +10,8 @@ function Pendiente () {
     const dispatch = useDispatch()
 
     const eliminarNota = (id, event) => {
-        let data = seleccionarNota(notas, id)
+        let [data, indice] = busquedaNota(notas, id)  // este es el problema
+        
         console.log('agregada a eliminada: ', data)
         dispatch(agregarNotaEliminada(data)) // agrega la nota al estado de eliminadas
         dispatch(eliminarNotaPendiente(id))
@@ -21,7 +22,7 @@ function Pendiente () {
         console.log("Esta nota ha sido eliminada.")
     }
 
-    // TODO: Agregar funcionalidad, cuando haya hover sobre nota, la nota cambie su z-index, para ocultar boton de agregar
+        // TODO: Agregar funcionalidad, cuando haya hover sobre nota, la nota cambie su z-index, para ocultar boton de agregar
     
     return (
         <section className="contenedor">  

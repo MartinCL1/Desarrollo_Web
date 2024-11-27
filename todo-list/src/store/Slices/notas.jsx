@@ -12,7 +12,7 @@ const insertarNota = (state, action) => {
     state.notas.push(action.payload)
 }
 
-function busquedaNota(notas, id){
+export const busquedaNota = (notas, id) => {
     let indice = -1
     let indiceStart = 0
     let indiceEnd = notas.length - 1
@@ -20,7 +20,7 @@ function busquedaNota(notas, id){
     while(indiceStart <= indiceEnd){  
         let middleValue = Math.floor((indiceStart + indiceEnd) / 2)
         if(notas[middleValue].id === id) { 
-            return notas[middleValue]  
+            return [notas[middleValue], middleValue]  // retorna el indice donde se encontro el elemento
         }else if(notas[middleValue].id > id){
             indiceEnd = middleValue - 1
         }else if( notas[middleValue].id < id ) {
@@ -33,20 +33,19 @@ function busquedaNota(notas, id){
 
 const removerNota = (state, action) => {
     
-    let nuevaNota = busquedaNota(state.notas, action.payload) // se busca la nota
-    console.log('La nota eliminada es: ',nuevaNota, 'y su valor es: ', nuevaNota.id)
+    let [nuevaNota, indice] = busquedaNota(state.notas, action.payload) // se busca la nota y se retorna la posicion
 
-    console.log('eliminadas: ', state.notas)
+    console.log('La nueva nota es: ' ,nuevaNota)
+    console.log('El indice asociado es: ', indice)
+    // console.log('eliminadas: ', state.notas)
 
-    state.notas.forEach(element => {
-        console.log('Item N. ',element.id)
-    });
+    // state.notas.forEach(element => {
+    //     console.log('Item N. ',element.id)
+    // });
 
-    // if(nuevaNota !== -1) {
-    //     console.log('Entra aca')
-    //     state.notas.splice(nuevaNota, 1)
-    // }
-    
+    if(indice.id !== null) {
+        state.notas.splice(indice, 1)
+    }
     
 }
 
