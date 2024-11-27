@@ -1,0 +1,18 @@
+.vacio {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.vacio h1 {
+    font-size: clamp(30px, 5vw + 5px, 60px );
+}
+
+.vacio p {
+    color: #708090a7;
+    font-size: clamp(5px, 4vw + 5px, 15px);
+}
