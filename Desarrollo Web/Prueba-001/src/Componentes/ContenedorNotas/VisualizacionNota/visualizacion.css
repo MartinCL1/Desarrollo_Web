@@ -1,0 +1,9 @@
+.visualizacion {
+    background-color: #ffffff;
+    height: 83vh;
+    overflow: scroll;
+}
+
+.visualizacion::-webkit-scrollbar {
+    width: 0;
+}

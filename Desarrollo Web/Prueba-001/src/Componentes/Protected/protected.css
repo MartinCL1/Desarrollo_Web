@@ -1,0 +1,13 @@
+.contenedor-app {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    overflow: hidden;
+}
+
+@media (width < 640px) {
+    .contenedor-app {
+        grid-template-columns: auto;
+        grid-template-rows: 1fr auto;
+    }
+}

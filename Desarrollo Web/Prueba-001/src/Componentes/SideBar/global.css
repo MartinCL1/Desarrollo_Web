@@ -1,0 +1,111 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+}
+
+.nota-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  height: 100%;
+  padding: 22px;
+  background: #ffffff;
+  color: #333;
+}
+
+
+.nota-form h2 {
+  text-align: center;
+  margin: 8px 0;
+  color: #2a2a2a;
+  font-size: 1.4rem;
+}
+
+.nota-form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.nota-form input,
+.nota-form textarea,
+.nota-form select {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(36, 36, 36, 0.356);
+  background: #f9f9f9;
+  color: #333;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.nota-form input:focus,
+.nota-form textarea:focus,
+.nota-form select:focus {
+  border-color: #1e1e1e;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 4px rgba(32, 39, 39, 0.4);
+}
+
+.nota-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.nota-form button {
+  padding: 8px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  background: #ffffff;
+  color: black;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.1s ease;
+}
+
+.nota-form button:hover {
+  background: #000000;
+  color: white;
+}
+
+.nota-form button:active {
+  transform: scale(0.98);
+}
+
+.nota-form .checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+/* AJUSTES ADICIONALES PARA LA INFORMACION DE LA NOTA */
+
+.info-nota {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+.info-nota h2 {
+  text-align: start;
+  text-wrap: balance;
+}
+
+.info-nota p {
+  display: flex;
+  overflow: scroll;
+  height: 40%;
+  min-height: 200px;
+  scrollbar-width: 0;
+}
+
+.info-nota p::-webkit-scrollbar {
+  width: 0;
+}

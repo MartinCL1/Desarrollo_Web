@@ -1,0 +1,45 @@
+.lista {
+    font-size: clamp(18px, 1vw, 30px);
+    color: white;
+    position: relative;
+}
+
+.lista .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 3vw;
+    width: 100%;
+    height: 100%;
+}
+
+    .lista .menu span {
+        display: flex;
+        user-select: none;
+        cursor: pointer;
+    }
+
+.lista .submenu {
+    position: relative;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+    padding: 10px 5vw;
+}
+
+.submenu a {
+    width: 100%;
+    padding: 8px;
+    white-space: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: white;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid transparent;
+    transition: .7s border-color;
+}
+
+.submenu button:hover {
+    border-bottom-color: white;
+} 
